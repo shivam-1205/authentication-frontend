@@ -2,12 +2,17 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Protected(props) {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    let Login = localStorage.getItem("Login");
-    if (!Login) {
-      Navigate("/");
+    debugger;
+    const token = localStorage.getItem("fe_token");
+    let isTokenPresent;
+    if (token) {
+      isTokenPresent = token.split(".").length === 3;
+    }
+    if (!isTokenPresent) {
+      navigate("/");
     }
   });
 

@@ -1,0 +1,91 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.from2 {
+  width: 320px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.devFullName,
+.DivMobileNumber,
+.passwordDiv,
+.submitDiv {
+  margin-bottom: 20px;
+}
+
+.labelfullName,
+.labelMobileNumber,
+.emailLabel,
+.labelPassword {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.inputText,
+.NumberInput,
+.emailInput,
+.inputInput {
+  width: 94.2%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  background-color: rgb(221 198 198 / 80%);
+}
+
+.inputText:focus,
+.NumberInput:focus,
+.emailInput:focus,
+.inputInput:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: rgb(221 198 198 / 80%);
+}
+
+.submitDiv button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitDiv button:hover {
+  background-color: #0056b3;
+}
+
+.submitDiv a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.submitDiv a:hover {
+  text-decoration: underline;
+}

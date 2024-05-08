@@ -1,0 +1,92 @@
+/* body {
+  background-image: url("../image/pebble-rock.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat; */
+
+.label1,
+.label2 {
+  color: black;
+  text-align: left;
+}
+
+.login {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1a576d;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.from1 {
+  width: 300px;
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(62, 40, 40, 0.1);
+}
+
+.emailDiv,
+.passwordDiv {
+  margin-bottom: 20px;
+}
+
+.emailInput,
+.passwordInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: rgb(221 198 198 / 80%);
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  color: black;
+}
+
+.emailInput:focus,
+.passwordInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.divh3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header3 {
+  font-size: 18px;
+  color: #6d2424;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
