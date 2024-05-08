@@ -22,7 +22,7 @@ function VerifyEmail() {
           }, 2000);
         });
     }, 3000);
-  });
+  }, []);
 
   return (
     <>

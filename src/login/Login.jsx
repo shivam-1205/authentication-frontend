@@ -21,20 +21,23 @@ function Login() {
         if (res.data.statusCode === 200) {
           const token = res.data.result.token;
           localStorage.setItem("fe_token", token);
-          navigate("/dashboard");
+          navigate("/moods");
         } else {
           console.log(res);
         }
+      })
+      .catch((err) => {
+        alert(err.message);
       });
   };
 
   return (
     <>
-      <div className="body">
+      <div className="auth-container">
         <h1 className={styles.login}>Login</h1>
         <form className={styles.from1}>
           <div className={styles.passwordDiv}>
-            <label className={styles.label1}>Email : </label>
+            <label className={styles.label1}>Email</label>
             <input
               className={styles.emailInput}
               type="email"
@@ -45,7 +48,7 @@ function Login() {
             />
           </div>
           <div className={styles.passwordDiv}>
-            <label className={styles.label2}>Password : </label>
+            <label className={styles.label2}>Password</label>
             <input
               className={styles.passwordInput}
               type="password"
@@ -55,7 +58,9 @@ function Login() {
               }}
             />
           </div>
-          <button onClick={submitLogin}>Submit</button>
+          <button className={styles.button} onClick={submitLogin}>
+            Submit
+          </button>
           <div className={styles.divh3}>
             <h3 className={styles.header3}>Don't have an account </h3>
             <Link to={"/register"}>Registration</Link>

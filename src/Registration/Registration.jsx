@@ -33,63 +33,65 @@ function Registration() {
 
   return (
     <>
-      <h1 className={Styles.header2}>Registration Form</h1>
-      <form className={Styles.from2}>
-        <div className={Styles.devFullName}>
-          <label className={Styles.labelfullName}>Full name : </label>
-          <input
-            className={Styles.inputText}
-            type="text"
-            placeholder="username"
-            onChange={(e) => {
-              setUsernameReg(e.target.value);
-            }}
-          />
-        </div>
-        <div className={Styles.DivMobileNumber}>
-          <label className={Styles.labelMobileNumber}>Mobile Number : </label>
-          <input
-            className={Styles.NumberInput}
-            type="number"
-            placeholder="Number"
-            onChange={(e) => {
-              setMobileReg(e.target.value);
-              if (value.match(phoneNo)) {
-                return true;
-              } else {
-                alert("message");
-                return false;
-              }
-            }}
-          />
-        </div>
-        <div>
-          <label className={Styles.emailLabel}>Email : </label>
-          <input
-            className={Styles.emailInput}
-            type="email"
-            placeholder="Email"
-            onChange={(e) => {
-              setEmailReg(e.target.value);
-            }}
-          />
-        </div>
-        <div className={Styles.passwordDiv}>
-          <label className={Styles.labelPassword}>Password : </label>
-          <input
-            className={Styles.inputInput}
-            type="password"
-            placeholder="password"
-            onChange={(e) => {
-              setPasswordReg(e.target.value);
-            }}
-          />
-        </div>
-        <div className={Styles.submitDiv}>
-          <button onClick={submitForm}>Submit</button>
-          <Link to={"/"}>Login</Link>
-        </div>
-      </form>
+      <div className="auth-container">
+        <h1 className={Styles.header2}>Registration Form</h1>
+        <form className={Styles.from2}>
+          <div className={Styles.devFullName}>
+            <label className={Styles.labelfullName}>Full name : </label>
+            <input
+              className={Styles.inputText}
+              type="text"
+              placeholder="username"
+              onChange={(e) => {
+                setUsernameReg(e.target.value);
+              }}
+            />
+          </div>
+          <div className={Styles.DivMobileNumber}>
+            <label className={Styles.labelMobileNumber}>Mobile Number : </label>
+            <input
+              className={Styles.NumberInput}
+              type="number"
+              placeholder="Number"
+              onChange={(e) => {
+                setMobileReg(e.target.value);
+                if (value.match(phoneNo)) {
+                  return true;
+                } else {
+                  alert("message");
+                  return false;
+                }
+              }}
+            />
+          </div>
+          <div>
+            <label className={Styles.emailLabel}>Email : </label>
+            <input
+              className={Styles.emailInput}
+              type="email"
+              placeholder="Email"
+              onChange={(e) => {
+                setEmailReg(e.target.value);
+              }}
+            />
+          </div>
+          <div className={Styles.passwordDiv}>
+            <label className={Styles.labelPassword}>Password : </label>
+            <input
+              className={Styles.inputInput}
+              type="password"
+              placeholder="password"
+              onChange={(e) => {
+                setPasswordReg(e.target.value);
+              }}
+            />
+          </div>
+          <div className={Styles.submitDiv}>
+            <button onClick={submitForm}>Submit</button>
+            <Link to={"/"}>Login</Link>
+          </div>
+        </form>
+      </div>
     </>
   );
 }

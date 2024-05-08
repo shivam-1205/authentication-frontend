@@ -15,6 +15,7 @@
 .label2 {
   color: black;
   text-align: left;
+  display: block;
 }
 
 .login {
@@ -56,7 +57,7 @@
   border-color: #007bff;
 }
 
-button {
+.button {
   width: 100%;
   padding: 10px;
   background-color: #007bff;

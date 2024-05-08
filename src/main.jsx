@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
+import Moods from "./Moods/Moods.jsx";
+import Questionnaire from "./Questionnaire/Questionnaire.jsx";
 import Registration from "./Registration/Registration.jsx";
-import Dashboard from "./dashboard/Dashboard.jsx";
 import "./index.css";
 import Login from "./login/Login.jsx";
 import Profile from "./profile/profile.jsx";
@@ -32,12 +33,25 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path: "dashboard",
-        element: (
-          <Protected>
-            <Dashboard />
-          </Protected>
-        ),
+        path: "moods",
+        children: [
+          {
+            path: "",
+            element: (
+              <Protected>
+                <Moods />
+              </Protected>
+            ),
+          },
+          {
+            path: ":moodId",
+            element: (
+              <Protected>
+                <Questionnaire />
+              </Protected>
+            ),
+          },
+        ],
       },
     ],
   },
